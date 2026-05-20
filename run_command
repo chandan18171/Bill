@@ -1,0 +1,12 @@
+# Commands to run the project from scratch:
+
+composer install
+cp .env.example .env
+# Edit .env to use sqlite: DB_CONNECTION=sqlite
+touch database/database.sqlite
+php artisan key:generate
+php artisan migrate --force
+php artisan db:seed --force
+npm install
+npm run build
+php artisan serve
